@@ -34,6 +34,10 @@ a {
   scroll-behavior: smooth;
 }
 
+section {
+  padding-top: 86px;
+}
+
 h1,
 h2,
 h3,
