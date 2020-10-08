@@ -1,0 +1,17 @@
+:root {
+  --black: #1212121;
+  --blue: #0052cc;
+  --blue-light: #4bc0c8;
+  --pink: #c779d0;
+  --orange: #feac5e;
+  --graient-default: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif !important;
+}
