@@ -1,3 +1,4 @@
+@import './css/spacing.css';
 :root {
   --black: #121212;
   --light: #f6f6f6;
@@ -13,13 +14,19 @@
   --primary: var(--blue);
   --secondary: var(--blue-dark);
 
-  
   --bg: var(--light);
   --text-on-bg: var(--black);
   --text-on-primary: var(--light);
   --text-on-secondary: var(--light);
   --border-color: var(--gray-1);
   --border: 1px solid var(--border-color);
+
+  --font: 'Inter', sans-serif !important;
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+a {
+  text-decoration: none;
 }
 
 * {
@@ -27,9 +34,15 @@
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
+  font-family: var(--font);
 }
 
 p {
@@ -40,8 +53,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif !important;
+  font-family: var(--font);
   color: var(--text-on-bg);
-  background-color: var(--bg)
+  background-color: var(--bg);
 }
 
 .container {
@@ -70,11 +84,41 @@ body {
   font-weight: 700;
 }
 
+/* UI Elements */
+
 .button {
-  background-color: black;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  outline: none;
+  font-family: var(--font);
+  background-color: #121212;
+  background-color: var(--black);
   color: white;
   border-radius: 4px;
   border: 1px solid black;
+  transition: all 0.2s var(--easing);
+  transition-property: border, background-color, color;
+}
+.button.small {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+}
+
+.button-primary {
+  color: var(--text-on-primary);
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.button:hover {
+  background-color: var(--bg);
+  color: var(--text-on-bg);
+}
+.button-primary:hover {
+  background-color: var(--bg);
+  color: var(--primary);
 }
 
 /*
@@ -84,6 +128,7 @@ Text
 */
 
 .text-center {
+  text-align: center;
   align-items: center;
 }
 
@@ -116,7 +161,7 @@ Navbar
 
 .navbar-nav {
   margin: 0;
-  display:flex;
+  display: flex;
   list-style: none;
   padding: 20px;
 }
@@ -128,9 +173,9 @@ Navbar
 }
 
 .navItem {
-color: var(--text-on-bg);
-padding: 20px 20px;
-text-decoration: none;
+  color: var(--text-on-bg);
+  padding: 20px 20px;
+  text-decoration: none;
 }
 
 .navItem:hover {
@@ -182,6 +227,8 @@ text-decoration: none;
   height: 50%;
 }
 
+.about-us {
+}
 /*
 -------------
 Meet our team
@@ -202,14 +249,13 @@ hr {
   width: 250px;
   height: 250px;
   display: block;
-  box-shadow: 0 8px 30px rgba( 0, 0, 0, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .center-img {
   margin: auto;
   display: flex;
   justify-content: center;
-
 }
 
 .rounded {
@@ -229,13 +275,11 @@ hr {
 }
 
 .teamName::after {
-  content: " ";
-    display: block;
-    width: 70px;
-    height: 1px;
-    margin: 10px 0 10px;
-    background: var(--blue);
-    opacity: 0.5;
+  content: ' ';
+  display: block;
+  width: 70px;
+  height: 1px;
+  margin: 10px 0 10px;
+  background: var(--blue);
+  opacity: 0.5;
 }
-
-
