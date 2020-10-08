@@ -34,6 +34,10 @@ a {
   scroll-behavior: smooth;
 }
 
+section {
+  padding-top: 86px;
+}
+
 h1,
 h2,
 h3,
@@ -330,4 +334,20 @@ Contact us
 .contact-row {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+@media only screen and (min-width: 75em) {
+  .container {
+    width: 65rem !important;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .container {
+    width: 65rem !important;
+  }
+}
+
+@media only screen and (min-width: 85em) {
+  .container {
+    width: 75rem !important;
+  }
 }
