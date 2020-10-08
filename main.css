@@ -31,6 +31,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Inter', sans-serif !important;
   font-family: var(--font);
   color: var(--text-on-bg);
@@ -65,22 +66,65 @@ body {
   background-color: var(--black);
   color: white;
   border-radius: 4px;
-  border: 1px solid #121212;
-  border: 1px solid var(--black);
-  transition: all 0.2s var(--easing);
-  transition-property: background-color, color;
+  border: 1px solid black;
 }
 
-.button:hover {
-  background-color: var(--bg);
-  color: var(--text-on-bg);
+/*
+------ 
+Navbar
+------ 
+*/
+
+.navbar {
+  background-color: black;
+  opacity: 0.7;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid red;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-.button-primary {
-  border: 1px solid var(--primary);
-  background-color: var(--primary);
-  color: var(--text-on-primary);
+ul {
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 20px;
 }
-.button-primary:hover {
-  color: var(--primary);
+
+.navItem {
+  color: red;
+  padding: 30px 30px;
+  text-decoration: none;
+}
+
+.toggle-collapse {
+  background: transparent;
+  float: right;
+  display: none;
+  color: red;
+  border: none;
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 644px) {
+  .toggle-collapse {
+    display: inline-block;
+  }
+  ul {
+    display: block;
+  }
+  .navbar-collapse {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    height: 0px;
+    transition: all 499ms ease;
+  }
+}
+.collapse {
+  height: 50%;
 }

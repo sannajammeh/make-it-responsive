@@ -21,11 +21,36 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./main.css" />
+
+    <!-- Responsive Navbar -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+          $('.toggle-collapse').click(function() {
+              $('.navbar-collapse').toggleClass("collapse");
+          });
+      });
+
+    </script>
   </head>
   <body>
-    <div class="container">
-      <h1>Innova</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <button class="toggle-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="navbar-collapse">
+      <ul class="justify-content-right">
+        <li><a href="#" class="navItem">About Us</a></li>
+        <li><a href="#" class="navItem">Our Team</a></li>
+        <li><a href="#" class="navItem">Innovation Camps</a></li>
+        <li><a href="#" class="navItem">Contact Us</a></li>
+      </ul>
     </div>
+    </nav>
+
+  
 
     <script src="./app.js"></script>
   </body>
