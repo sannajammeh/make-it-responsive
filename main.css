@@ -60,7 +60,10 @@ body {
 
 .container {
   padding: 50px 50px;
-  margin-bottom: 50px;
+}
+
+.row {
+  padding: 20px 20px;
 }
 
 .d-flex {
@@ -183,6 +186,11 @@ Navbar
   border-bottom: 1px solid var(--blue);
 }
 
+.active {
+  color: black;
+  border-bottom: 1px solid var(--blue);
+}
+
 .toggle-collapse {
   background: transparent;
   float: right;
@@ -193,6 +201,12 @@ Navbar
   padding: 10px;
   cursor: pointer;
 }
+
+/*
+----------
+Responsive
+----------
+*/
 
 @media (max-width: 781px) {
   .toggle-collapse {
@@ -264,7 +278,7 @@ hr {
 
 .teamHeader {
   padding: 5px 0;
-  opacity: 0.5;
+  opacity: 0.6;
   color: var(--blue);
   font-weight: 200;
 }
@@ -282,4 +296,38 @@ hr {
   margin: 10px 0 10px;
   background: var(--blue);
   opacity: 0.5;
+}
+
+/* 
+----------
+Contact us
+----------
+*/
+
+.inputEl {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 20px 5px;
+  outline: none;
+  border-bottom: 1px solid var(--blue);
+  border-radius: 0px;
+}
+
+.label-text {
+  padding: 10px 0;
+}
+
+.contact-text {
+  padding: 20px;
+}
+
+.col-sm-6,
+.col-sm-12 {
+  padding: 10px 5px;
+}
+
+.contact-row {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }

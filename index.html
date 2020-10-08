@@ -29,7 +29,7 @@
 
     <!-- Custom stylesheet -->
     <link rel="stylesheet" href="./main.css" />
-    
+
   </head>
   <body id="page-top">
     <!-- Intro -->
@@ -48,12 +48,13 @@
         <ul class="navbar-nav align-items-center">
           <a href="#page-top"><i class="icon fab fa-pushed"></i></a>
           <li class="nav-link"><a href="#about-us" class="navItem">About Us</a></li>
-          <li class="nav-link"><a href="#ourTeam" class="navItem">Our Team</a></li>
+          <li class="nav-link"><a href="#our-team" class="navItem">Our Team</a></li>
           <li class="nav-link"><a href="#innovation-camps" class="navItem">Innovation Camps</a></li>
-          <li class="nav-link"><a href="#" class="navItem">Contact Us</a></li>
+          <li class="nav-link"><a href="#contact-us" class="navItem">Contact Us</a></li>
         </ul>
       </div>
     </nav>
+    <!-- Navbar end -->
 
     <!--About us -->
     <section class="container about-us mt-5" id="about-us">
@@ -67,13 +68,10 @@
     </section>
     <!--About us end -->
 
-    <!-- Navbar end -->
-
     <!-- Our team -->
-    <div id="ourTeam"></div>
-    <section>
+    <section id="our-team">
       <h1 class="sectionHeader text-center">Meet our team</h1>
-      <hr />
+      <hr/>
       <!-- Houcine Ncib -->
       <div class="container">
         <div class="row">
@@ -139,6 +137,50 @@
       </div>
     </section>
     <!-- Our team end -->
+
+    <!-- Contact us -->
+    <section id="contact-us">
+      <div class="container">
+        <h1 class="sectionHeader text-center">Let's work together!</h1>
+        <hr/>
+        <p class="text-center contact-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row contact-row">
+
+          <div class="col-sm-6">
+            <label class="label-text" for="fname">Your first name *</label>
+            <input type="text" name="name" class="inputEl" placeholder="Please enter your first name ..." required>
+          </div>
+
+          <div class="col-sm-6">
+            <label class="labelText" for="fname">Your last name *</label>
+            <input type="text" name="name" class="inputEl" placeholder="Please enter your last name ..." required>
+          </div>
+
+          <div class="col-sm-6">
+            <label class="labelText" for="fname">Subject *</label>
+            <input type="text" name="subject" class="inputEl" placeholder="Subject ..." required>
+          </div>
+
+          <div class="col-sm-12">
+            <label class="labelText" for="fname">Your email adress *</label>
+            <input type="text" name="email" class="inputEl" placeholder="Please enter your email adress ..." required>
+          </div>
+
+          <div class="col-sm-12">
+            <label class="labelText" for="fname">Your message for us *</label>
+            <textarea name="message" class="inputEl" placeholder="Your message for us ..." row="4" required></textarea>
+          </div>
+
+          <div class="col-xs-12 pt-3 pb-3">
+            <center><a href="#" class="button button-primary">Submit</a></center>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Contact us end -->
+
+    <section style="background-color: black; height: 300px"></section>
 
     <script src="./app.js"></script>
   </body>
