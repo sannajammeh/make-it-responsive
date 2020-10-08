@@ -23,17 +23,25 @@
     <link rel="stylesheet" href="./main.css" />
 
     <!-- Responsive Navbar -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
     <script>
-      $(document).ready(function() {
-          $('.toggle-collapse').click(function() {
-              $('.navbar-collapse').toggleClass("collapse");
-          });
+      $(document).ready(function () {
+        $('.toggle-collapse').click(function () {
+          $('.navbar-collapse').toggleClass('collapse');
+        });
       });
-
     </script>
   </head>
-  <body>
+  <body id="page-top">
+    <!-- Intro -->
+    <h4 class="introHeader text-center">
+      Next Innovation Camp: Join us on Oct 27.
+      <a href="#innovation-camps" class="button button-primary small ml-2">Register</a>
+    </h4>
+    <!-- Intro end -->
 
     <!-- Navbar -->
     <nav class="navbar">
@@ -41,16 +49,40 @@
         <i class="fa fa-bars"></i>
       </button>
       <div class="navbar-collapse">
-      <ul class="justify-content-right">
-        <li><a href="#" class="navItem">About Us</a></li>
-        <li><a href="#" class="navItem">Our Team</a></li>
-        <li><a href="#" class="navItem">Innovation Camps</a></li>
-        <li><a href="#" class="navItem">Contact Us</a></li>
-      </ul>
-    </div>
+        <ul class="navbar-nav align-items-center">
+          <a href="#page-top"><i class="icon fab fa-pushed"></i></a>
+          <li><a href="#about-us" class="navItem">About Us</a></li>
+          <li><a href="#" class="navItem">Our Team</a></li>
+          <li><a href="#innovation-camps" class="navItem">Innovation Camps</a></li>
+          <li><a href="#" class="navItem">Contact Us</a></li>
+        </ul>
+      </div>
     </nav>
 
-  
+    <!--About us -->
+    <section class="container about-us mt-5" id="about-us">
+      <h2 class="font-weight-medium">About us</h2>
+      <h3 class="mt-4 font-weight-medium">World leader in frugal innovation</h3>
+      <p class="mt-1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, aut. Delectus, quos
+        corrupti accusantium excepturi at animi distinctio laborum quidem!
+        <br />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, incidunt?
+      </p>
+    </section>
+    <!--About us end -->
+
+    <!-- Navbar end -->
+
+    <!-- Our team -->
+    <section>
+      <div class="container" style="background-color: blue; height: 300px">
+        <div class="row" style="background-color: red; height: 300px">
+          <div class="col-sm-6" style="background-color: green; height: 300px"></div>
+          <div class="col-sm-6" style="background-color: yellow; height: 300px"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Our team end -->
 
     <script src="./app.js"></script>
   </body>
