@@ -13,13 +13,16 @@
   --primary: var(--blue);
   --secondary: var(--blue-dark);
 
-  
   --bg: var(--light);
   --text-on-bg: var(--black);
-  --text-on-primary: var(--light)
+  --text-on-primary: var(--light);
   --text-on-secondary: var(--light);
   --border-color: var(--gray-1);
   --border: 1px solid var(--border-color);
+
+  --font: 'Inter', sans-serif !important;
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 * {
@@ -29,8 +32,9 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif !important;
+  font-family: var(--font);
   color: var(--text-on-bg);
-  background-color: var(--bg)
+  background-color: var(--bg);
 }
 
 /* Utilities */
@@ -51,8 +55,32 @@ body {
 }
 
 .button {
-  background-color: black;
+  margin: 0;
+  padding: 0;
+  padding: 0.6rem 1rem;
+  font-weight: 500;
+  outline: none;
+  font-family: var(--font);
+  background-color: #121212;
+  background-color: var(--black);
   color: white;
   border-radius: 4px;
-  border: 1px solid black;
+  border: 1px solid #121212;
+  border: 1px solid var(--black);
+  transition: all 0.2s var(--easing);
+  transition-property: background-color, color;
+}
+
+.button:hover {
+  background-color: var(--bg);
+  color: var(--text-on-bg);
+}
+
+.button-primary {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+}
+.button-primary:hover {
+  color: var(--primary);
 }
