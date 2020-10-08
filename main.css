@@ -1,10 +1,25 @@
 :root {
-  --black: #1212121;
+  --black: #121212;
+  --light: #f6f6f6;
   --blue: #0052cc;
+  --blue-dark: #3d00cc;
   --blue-light: #4bc0c8;
   --pink: #c779d0;
-  --orange: #feac5e;
+  --orange: #050404;
+  --gray-1: #eaeaea;
+
   --graient-default: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+
+  --primary: var(--blue);
+  --secondary: var(--blue-dark);
+
+  
+  --bg: var(--light);
+  --text-on-bg: var(--black);
+  --text-on-primary: var(--light)
+  --text-on-secondary: var(--light);
+  --border-color: var(--gray-1);
+  --border: 1px solid var(--border-color);
 }
 
 * {
@@ -14,4 +29,30 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif !important;
+  color: var(--text-on-bg);
+  background-color: var(--bg)
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+.font-weight-normal {
+  font-weight: 400;
+}
+.font-weight-medium {
+  font-weight: 500;
+}
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid black;
 }
