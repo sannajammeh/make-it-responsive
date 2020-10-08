@@ -27,6 +27,18 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font);
 }
 
 body {
@@ -55,6 +67,8 @@ body {
   font-weight: 700;
 }
 
+/* UI Elements */
+
 .button {
   margin: 0;
   padding: 0;
@@ -70,40 +84,71 @@ body {
 }
 
 /*
+----
+Text
+----
+*/
+
+.text-center {
+  align-items: center;
+}
+
+.introHeader {
+  padding: 10px 10px;
+  font-weight: 500;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/*
 ------ 
 Navbar
 ------ 
 */
 
 .navbar {
-  background-color: black;
-  opacity: 0.7;
+  background-color: var(--bg);
+  opacity: 0.8;
   padding-top: 0;
   padding-bottom: 0;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 1;
+  backdrop-filter: saturate(180%) blur(5px);
 }
 
-ul {
+.navbar-nav {
   margin: 0;
   display: flex;
   list-style: none;
   padding: 20px;
 }
 
+.icon {
+  font-size: 40px;
+  color: blacK;
+  padding-right: 20px;
+}
+
 .navItem {
-  color: red;
-  padding: 30px 30px;
+  color: var(--text-on-bg);
+  padding: 20px 20px;
   text-decoration: none;
+}
+
+.navItem:hover {
+  color: black;
+  border-bottom: 1px solid var(--blue);
 }
 
 .toggle-collapse {
   background: transparent;
   float: right;
   display: none;
-  color: red;
+  color: var(--text-on-bg);
   border: none;
   font-size: 40px;
   padding: 10px;
@@ -125,6 +170,10 @@ ul {
     transition: all 499ms ease;
   }
 }
+
 .collapse {
   height: 50%;
+}
+
+.about-us {
 }
