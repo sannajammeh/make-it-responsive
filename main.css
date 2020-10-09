@@ -332,7 +332,7 @@ Navbar
 
 .navbar {
   background-color: var(--bg);
-  opacity: 0.8;
+  opacity: 0.9;
   padding-top: 0;
   padding-bottom: 0;
   border-bottom: 1px solid var(--border-color);
