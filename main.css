@@ -37,6 +37,12 @@ a {
 
 section {
   padding-top: 86px;
+  scroll-snap-align: start;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
 h1,
@@ -61,7 +67,10 @@ body {
   font-family: var(--font);
   color: var(--text-on-bg);
   background-color: var(--bg);
+  overflow-x: hidden;
+  
 }
+
 
 .container {
   padding: 50px 50px;
