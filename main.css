@@ -157,6 +157,80 @@ Text
 }
 
 /*
+----------
+Responsive
+----------
+*/
+
+@media (max-width: 781px) {
+  .toggle-collapse {
+    display: inline-block;
+  }
+  .nav-link {
+    display: block;
+    padding: 20px;
+  }
+  .navbar-nav {
+    display: block;
+  }
+  .navbar-collapse {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    height: 0px;
+    transition: all 499ms ease;
+  }
+  .team-member {
+    display: block;
+  }
+  .container {
+    padding: 10px 30px;
+  }
+  .icon {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .container {
+    width: 65rem !important;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .container {
+    width: 65rem !important;
+  }
+}
+
+@media only screen and (min-width: 85em) {
+  .container {
+    width: 75rem !important;
+  }
+}
+
+/*
+----------
+Animations
+----------
+*/
+.fade {
+  transition: all 0.5s ease-in;
+  transition-property: opacity,transform;
+}
+
+.fadeOut { 
+  opacity: 0; 
+  transform: translateY(30px);
+}
+
+.fadeIn { 
+  opacity: 1; 
+  transform: translateY(0px);
+}
+
+
+/*
 ------ 
 Navbar
 ------ 
@@ -214,47 +288,10 @@ Navbar
   cursor: pointer;
 }
 
-/*
-----------
-Responsive
-----------
-*/
-
-@media (max-width: 781px) {
-  .toggle-collapse {
-    display: inline-block;
-  }
-  .nav-link {
-    display: block;
-    padding: 20px;
-  }
-  .navbar-nav {
-    display: block;
-  }
-  .navbar-collapse {
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    height: 0px;
-    transition: all 499ms ease;
-  }
-  .team-member {
-    display: block;
-  }
-  .container {
-    padding: 10px 30px;
-  }
-  .icon {
-    display: none;
-  }
-}
-
 .collapse {
   height: 50%;
 }
 
-.about-us {
-}
 /*
 -------------
 Meet our team
@@ -342,20 +379,10 @@ Contact us
 .contact-row {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-@media only screen and (min-width: 75em) {
-  .container {
-    width: 65rem !important;
-  }
 }
 
-@media only screen and (min-width: 75em) {
-  .container {
-    width: 65rem !important;
-  }
+textarea {
+  max-width: 100%;
+  min-width: 100%; 
 }
 
-@media only screen and (min-width: 85em) {
-  .container {
-    width: 75rem !important;
-  }
-}

@@ -28,4 +28,24 @@ window.addEventListener('scroll', () => {
     navItems[current].classList.add('active');
 });
 
+// Make elemenst fade in and out
+const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.7
+};
+
+function observerCallback(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.replace('fadeOut', 'fadeIn');
+        }
+    });
+}
+
+const fadeElms = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+fadeElms.forEach(el => observer.observe(el));
+
 
