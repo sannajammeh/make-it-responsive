@@ -331,10 +331,12 @@ Navbar
   background: transparent;
   float: right;
   display: none;
-  color: var(--blue);
+  color: var(--black);
   border: none;
   font-size: 40px;
   padding: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
   cursor: pointer;
 }
 
