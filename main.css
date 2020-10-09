@@ -109,6 +109,7 @@ body {
   transition: all 0.2s var(--easing);
   transition-property: border, background-color, color;
 }
+
 .button.small {
   padding: 0.3rem 0.5rem;
   font-size: 0.8rem;
@@ -146,6 +147,13 @@ Text
 
 .align-items-center {
   align-items: center;
+}
+
+/* Hero */
+
+.hero {
+  height: 500px;
+  background-color: #feac5e;
 }
 
 /*
