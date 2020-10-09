@@ -13,8 +13,6 @@ toggleCollapse.addEventListener('click', (e) => {
   navbarCollapse.classList.toggle('collapse');
 });
 
-
-
 // Add class active to nav links
 const sections = document.querySelectorAll('section');
 const navItems = document.querySelectorAll('.navItem');
@@ -31,8 +29,6 @@ window.addEventListener('scroll', () => {
   });
   navItems[current].classList.add('active');
 });
-
-
 
 // Make elemenst fade in and out
 const observerOptions = {
@@ -55,34 +51,36 @@ const observer = new IntersectionObserver(observerCallback, observerOptions);
 fadeElms.forEach((el) => observer.observe(el));
 
 // Close responsive navbar after click
-navItems.forEach(navItem => {
+navItems.forEach((navItem) => {
   navItem.addEventListener('click', () => {
     navbarCollapse.classList.remove('collapse');
-  })
+  });
 });
-const heroSections = [
-  {
-    img:
-      'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80',
-    title: 'Channel your inner entrepreneur.',
-    subtitle: 'Join us at Oct 27th.',
-  },
-  {
-    img:
-      'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-    title: 'Get the most out of frugal innovation.',
-    subtitle: 'Join us at Oct 27th.',
-    reversed: true,
-  },
-  {
-    img:
-      'https://images.unsplash.com/photo-1503428593586-e225b39bddfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-    title: 'Become truly innovative',
-    subtitle:
-      ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, perspiciatis.',
-  },
-];
+
+// Using a closure to avoid namespace pollution.
 (() => {
+  const heroSections = [
+    {
+      img:
+        'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80',
+      title: 'Channel your inner entrepreneur.',
+      subtitle: 'Join us at Oct 27th.',
+    },
+    {
+      img:
+        'https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+      title: 'Get the most out of frugal innovation.',
+      subtitle: 'Join us at Oct 27th.',
+      reversed: true,
+    },
+    {
+      img:
+        'https://images.unsplash.com/photo-1503428593586-e225b39bddfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+      title: 'Become truly innovative',
+      subtitle:
+        ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, perspiciatis.',
+    },
+  ];
   // Generate hero sections
   const heroContainer = DataJS('hero-container');
   heroContainer.innerHTML = heroSections
@@ -95,7 +93,7 @@ const heroSections = [
         <h1 class="hero-title">${section.title}</h1>
         <div class="d-flex align-items-center hero-subtitle-container">
             <h2 class="hero-subtitle">${section.subtitle}</h2>
-            <a href="#innovation-camps" role="button" class="button button-primary small ml-2 d-block"><div>Join us</div></a>
+            <a href="#innovation-camps" role="button" class="button button-primary small ml-2 d-block hero-action"><div>Join us</div></a>
         </div>
     </div>
 </div>`
