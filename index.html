@@ -43,6 +43,7 @@
       <button class="toggle-collapse">
         <i class="fa fa-bars"></i>
       </button>
+      <a href="#page-top"><i class="icon mobile-icon fab fa-pushed"></i></a>
       <div class="navbar-collapse">
         <ul class="navbar-nav align-items-center">
           <a href="#page-top"><i class="icon fab fa-pushed"></i></a>
@@ -76,17 +77,17 @@
       <h2 class="sectionHeader text-center">About us</h2>
       <hr />
       <div class="row">
-        <div class="col-sm-6 p-3">
+        <div class="col-sm-6 p-3  fade fadeOut">
           <h3 class="mt-4 font-weight-medium">World leader in frugal innovation</h3>
-          <p class="mt-1">
+          <p class="mt-1 fade fadeOut">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, aut. Delectus,
             quos corrupti accusantium excepturi at animi distinctio laborum quidem!
             <br />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, incidunt?
           </p>
         </div>
-        <div class="col-sm-6 p-3">
+        <div class="col-sm-6 p-3  fade fadeOut">
           <h3 class="mt-4 font-weight-medium">Hosting the world's innovation camps</h3>
-          <p>
+          <p class="fade fadeOut">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium
             ducimus maiores excepturi eveniet nihil ea qui? Expedita, adipisci recusandae.
             <br />
@@ -109,10 +110,10 @@
             <div class="center-img col-sm-6">
               <img class="rounded img-fluid fade fadeOut" src="img/person1.jpg" />
             </div>
-            <div>
-              <h2 class="teamHeader fade fadeOut">Manager</h2>
-              <h2 class="teamName fade fadeOut">Houcine Ncib</h2>
-              <p class="fade fadeOut">
+            <div class="fade fadeOut">
+              <h2 class="teamHeader">Manager</h2>
+              <h2 class="teamName">Houcine Ncib</h2>
+              <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia perspiciatis
                 voluptas quae, atque ipsa corrupti laudantium magni omnis reiciendis accusamus
                 provident harum velit autem odit eligendi consequatur fugit. Libero, officiis saepe
@@ -130,10 +131,10 @@
             <div class="center-img col-sm-6">
               <img class="rounded img-fluid fade fadeOut" src="img/person2.jpg" />
             </div>
-            <div>
-              <h2 class="teamHeader fade fadeOut">Designer</h2>
-              <h2 class="teamName fade fadeOut">Luis Villasmil</h2>
-              <p class="fade fadeOut">
+            <div class="fade fadeOut">
+              <h2 class="teamHeader">Designer</h2>
+              <h2 class="teamName">Luis Villasmil</h2>
+              <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia perspiciatis
                 voluptas quae, atque ipsa corrupti laudantium magni omnis reiciendis accusamus
                 provident harum velit autem odit eligendi consequatur fugit. Libero, officiis saepe
@@ -151,10 +152,10 @@
             <div class="center-img col-sm-6">
               <img class="rounded img-fluid fade fadeOut" src="img/person3.jpg" />
             </div>
-            <div>
-              <h2 class="teamHeader fade fadeOut">Developer</h2>
-              <h2 class="teamName fade fadeOut">Etty Fidele</h2>
-              <p class="fade fadeOut">
+            <div class="fade fadeOut">
+              <h2 class="teamHeader">Developer</h2>
+              <h2 class="teamName">Etty Fidele</h2>
+              <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia perspiciatis
                 voluptas quae, atque ipsa corrupti laudantium magni omnis reiciendis accusamus
                 provident harum velit autem odit eligendi consequatur fugit. Libero, officiis saepe
@@ -169,7 +170,9 @@
     <!-- Our team end -->
 
     <!-- Innobvation camps -->
-    <section id="innovation-camps"></section>
+    <section id="innovation-camps">
+
+    </section>
     <!-- Innobvation camps end -->
 
     <!-- Contact us -->
@@ -238,7 +241,58 @@
     </section>
     <!-- Contact us end -->
 
-    <section style="background-color: black; height: 300px"></section>
+    <!-- Footer -->
+    <section class="footer" id="footer">
+      <div class="container">
+        <div class="row">
+          <!-- Newsletter -->
+          <div class="footer-flex footer-item">
+            <h3 class="text-center footer-header">Sign up for our newsletter</h3>
+            <p class="text-center">Join over 10.500 people who recieve weekly web marketing tips</p>
+            <center>
+            <input placeholder="Your email adress..." class="footer-input">
+            <button class="footer-btn button button-primary small">Submit</button>
+          </center>
+          </div>
+          <!-- Get in touch -->
+          <div class="footer-flex footer-item">
+            <h3 class="text-center footer-header">Get in touch</h3>
+            <div class="footer-icons">
+              <div class="d-flex align-items-center justify-content-center">
+                <i class="fas fa-envelope footer-icon"></i><span>Have any questions?</span>
+              </div>
+              <p>Email@example.com</p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <i class="fas fa-map-pin footer-icon"></i><span>Adress:</span>
+                </div>
+                <p>Adress, 1234, Country</p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <i class="fas fa-phone footer-icon"></i><span >Lorem:</span>
+                </div>
+                <p>XXX-XXXX-XXXX</p>
+            </div>
+          </div>
+          <!-- Stay connected-->
+          <div class="footer-flex footer-item">
+            <h3 class="text-center footer-header">Stay connected</h3>
+            <p class="social">
+              <a href="https://www.linkedin.com" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+            </p>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eum cum omnis nesciunt eveniet corrupti cumque architecto impedit eligendi asperiores.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer end-->
+
+    <!-- All rights reserved -->
+    <section class="all-rights-reserved">
+      <p class="text-center">© 2020 Your Company. All Rights Reserved.</p>
+    </section>
+    <!-- All rights reserved end -->
 
     <script src="./app.js"></script>
   </body>

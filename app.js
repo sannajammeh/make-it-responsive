@@ -13,6 +13,8 @@ toggleCollapse.addEventListener('click', (e) => {
   navbarCollapse.classList.toggle('collapse');
 });
 
+
+
 // Add class active to nav links
 const sections = document.querySelectorAll('section');
 const navItems = document.querySelectorAll('.navItem');
@@ -29,6 +31,8 @@ window.addEventListener('scroll', () => {
   });
   navItems[current].classList.add('active');
 });
+
+
 
 // Make elemenst fade in and out
 const observerOptions = {
@@ -49,3 +53,10 @@ const fadeElms = document.querySelectorAll('.fade');
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 fadeElms.forEach((el) => observer.observe(el));
+
+// Close responsive navbar after click
+navItems.forEach(navItem => {
+  navItem.addEventListener('click', () => {
+    navbarCollapse.classList.remove('collapse');
+  })
+});
