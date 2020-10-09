@@ -358,7 +358,7 @@ Navbar
   background: transparent;
   float: right;
   display: none;
-  color: var(--text-on-bg);
+  color: var(--blue);
   border: none;
   font-size: 40px;
   padding: 10px;
