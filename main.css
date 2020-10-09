@@ -79,6 +79,9 @@ body {
 .text-center {
   text-align: center;
 }
+.justify-content-center {
+  justify-content: center;
+}
 .font-weight-normal {
   font-weight: 400;
 }
@@ -304,6 +307,10 @@ Navbar
   padding-right: 20px;
 }
 
+.mobile-icon {
+  display: none;
+}
+
 .navItem {
   color: var(--text-on-bg);
   padding: 20px 20px;
@@ -429,11 +436,111 @@ textarea {
   min-width: 100%;
 }
 
+/* 
+------ 
+Footer
+------ 
+*/
+
+.footer {
+  color: var(--light);
+  background-color: var(--black);
+  padding-top: 20px;
+}
+
+.footer-items {
+  padding: 5px 10px; 
+}
+
+.footer-header {
+  padding-bottom: 20px;
+}
+
+.footer-flex {
+  padding-right:15px;
+  padding-left:15px;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 33%;
+  max-width:33%;
+}
+
+.footer-input {
+  border: none;
+  padding: 5px;
+}
+
+.footer-icons {
+  text-align: center;
+}
+
+.footer-icon {
+  padding: 10px;
+}
+
+p.social {
+  text-align: center;
+  padding: 3px;
+}
+
+p.social a{
+  margin: 0 10px 0 0;
+  color: white;
+  background-color: var(--blue);
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5 ease-in-out;
+  vertical-align: bottom;
+}
+
+p.social a:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  color: var(--blue);
+  background-color: white;
+  border-color: 1px solid color var(--blue);
+}
+
+p.social a i {
+  vertical-align: bottom;
+  line-height: 40px;
+}
+
+p.social a i:hover {
+  cursor: pointer;
+}
+
+/* 
+-------------------
+All rights reserved
+-------------------
+*/
+
+.all-rights-reserved {
+  padding: 10px;
+  background-color: #050505;
+  color: var(--light)
+}
+
 /*
 ----------
 Responsive
 ----------
 */
+
+@media (max-width: 1023px) {
+  .footer-flex {
+    padding: 15px;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    min-width:100%;
+  }
+}
 
 @media (max-width: 781px) {
   .toggle-collapse {
@@ -461,6 +568,11 @@ Responsive
   }
   .icon {
     display: none;
+  }
+  .mobile-icon {
+    display: block;
+    font-size: 40px;
+    padding: 20px;
   }
   .collapse {
     height: 50%;
