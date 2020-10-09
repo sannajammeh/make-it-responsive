@@ -24,14 +24,15 @@ window.addEventListener('scroll', () => {
     sections.length -
     [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) -
     1;
-  if (current === sections.length) return document.title = `Inova | Prosphering Innovation`;
+  if (current === sections.length) return (document.title = `Inova | Prosphering Innovation`);
 
   navItems.forEach((navItem) => {
     navItem.classList.remove('active');
   });
-  const currentItem = navItems[current]; 
-  currentItem.classList.add('active');
-  document.title = `Inova | ${currentItem.innerHTML}`;
+  const currentItem = navItems[current];
+  if (!currentItem.classList.contains('active')) currentItem.classList.add('active');
+  const title = `Inova | ${currentItem.innerHTML}`;
+  if (document.title !== title) document.title = title;
 });
 
 // Make elemenst fade in and out
