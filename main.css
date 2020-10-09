@@ -37,7 +37,6 @@ a {
 
 section {
   padding-top: 86px;
-  scroll-snap-align: start;
 }
 
 
@@ -56,10 +55,6 @@ p {
   margin-top: 5px;
 }
 
-html {
-  scroll-snap-type: y proximity;
-  scroll-padding-top: 5vh;
-}
 
 body {
   margin: 0;
@@ -197,6 +192,9 @@ Text
 }
 
 .introHeader {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 10px 10px;
   font-weight: 500;
 }
@@ -204,6 +202,7 @@ Text
 .align-items-center {
   align-items: center;
 }
+
 
 /* Hero */
 
@@ -652,5 +651,11 @@ Responsive
 @media (prefers-reduced-motion) {
   * {
     transition-duration: 2s;
+  }
+}
+
+@media (max-width: 409px) {
+  .start-btn {
+    margin-top: 10px;
   }
 }
