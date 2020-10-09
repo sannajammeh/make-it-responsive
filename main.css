@@ -359,13 +359,13 @@ Navbar
   display: none;
 }
 
-.navItem {
+.nav-item {
   color: var(--text-on-bg);
   padding: 20px 20px;
   text-decoration: none;
 }
 
-.navItem:hover {
+.nav-item:hover {
   color: black;
   border-bottom: 1px solid var(--blue);
 }
@@ -454,7 +454,7 @@ Contact us
 ----------
 */
 
-.inputEl {
+.input-el {
   width: 100%;
   border: none;
   background: transparent;
