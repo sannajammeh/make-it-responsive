@@ -205,59 +205,6 @@ Text
 }
 /*
 ----------
-Responsive
-----------
-*/
-
-@media (max-width: 781px) {
-  .toggle-collapse {
-    display: inline-block;
-  }
-  .nav-link {
-    display: block;
-    padding: 20px;
-  }
-  .navbar-nav {
-    display: block;
-  }
-  .navbar-collapse {
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    height: 0px;
-    transition: all 499ms ease;
-  }
-  .team-member {
-    display: block;
-  }
-  .container {
-    padding: 10px 30px;
-  }
-  .icon {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 75em) {
-  .container {
-    width: 65rem !important;
-  }
-}
-
-@media only screen and (min-width: 75em) {
-  .container {
-    width: 65rem !important;
-  }
-}
-
-@media only screen and (min-width: 85em) {
-  .container {
-    width: 75rem !important;
-  }
-}
-
-/*
-----------
 Animations
 ----------
 */
@@ -430,4 +377,60 @@ Contact us
 textarea {
   max-width: 100%;
   min-width: 100%;
+}
+
+/*
+----------
+Responsive
+----------
+*/
+
+@media (max-width: 781px) {
+  .toggle-collapse {
+    display: inline-block !important;
+  }
+  .nav-link {
+    display: block;
+    padding: 20px;
+  }
+  .navbar-nav {
+    display: block !important;
+  }
+  .navbar-collapse {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    height: 0px;
+    transition: all 499ms ease;
+  }
+  .team-member {
+    display: block;
+  }
+  .container {
+    padding: 10px 30px;
+  }
+  .icon {
+    display: none;
+  }
+  .collapse {
+    height: 50%;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .container {
+    width: 65rem !important;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .container {
+    width: 65rem !important;
+  }
+}
+
+@media only screen and (min-width: 85em) {
+  .container {
+    width: 75rem !important;
+  }
 }
