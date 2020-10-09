@@ -356,10 +356,11 @@ Navbar
 }
 
 .toggle-collapse {
+  outline: none;
   background: transparent;
   float: right;
   display: none;
-  color: var(--blue);
+  color: black;
   border: none;
   font-size: 40px;
   padding: 20px;

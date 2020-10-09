@@ -18,6 +18,8 @@ const sections = document.querySelectorAll('section');
 const navItems = document.querySelectorAll('.navItem');
 
 window.addEventListener('scroll', () => {
+  // if navitems are hidden, do nothing.
+  if (navItems.length === 0) return;
   const current =
     sections.length -
     [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) -
