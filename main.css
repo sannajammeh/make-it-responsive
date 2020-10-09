@@ -170,7 +170,8 @@ textarea:focus {
   box-shadow: var(--shadow);
 }
 
-input, textarea {
+input,
+textarea {
   transition: 0.2s;
 }
 
@@ -637,6 +638,8 @@ Responsive
   }
 }
 
-@media (max-width: 651px) {
-
+@media (prefers-reduced-motion) {
+  * {
+    transition-duration: 2s;
+  }
 }
