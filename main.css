@@ -91,6 +91,9 @@ body {
 .font-weight-bold {
   font-weight: 700;
 }
+.d-block {
+  display: block !important;
+}
 
 /* UI Elements */
 
@@ -109,6 +112,7 @@ body {
   border: 1px solid black;
   transition: all 0.2s var(--easing);
   transition-property: border, background-color, color;
+  white-space: nowrap;
 }
 
 .button.small {
@@ -154,6 +158,7 @@ Text
 
 .hero {
   height: 600px;
+  position: relative;
 }
 @media only screen and (min-width: 768px) {
   .hero {
@@ -170,24 +175,25 @@ Text
   width: 100px; */
 }
 .hero-brand {
+  visibility: hidden;
   width: 100%;
+  transform: translateX(0%);
   height: 100%;
-  position: relative;
-  background: black;
-}
-.hero-brand::after {
-  content: '';
   position: absolute;
   top: 0px;
-  left: 70%;
-  transform: translateX(-70%);
-  height: 100%;
-  background: linear-gradient(to right, transparent 0%, black 100%);
-  width: 300px;
+  left: 0px;
+  background: black;
+  transition: all 0.7s var(--easing);
+  transition-property: visibility, opacity;
+  opacity: 0;
+}
+.hero-brand.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 .hero-brand img {
-  width: 70%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -198,11 +204,55 @@ Text
   right: 2rem;
   transform: translateY(-50%);
   color: var(--text-on-dark);
+  text-align: right;
+  /* width: 50%; */
 }
 .hero-text .hero-title {
   font-size: 4rem;
   color: var(--text-on-dark);
 }
+.hero-text .hero-subtitle {
+  font-weight: 500;
+}
+.hero-text .hero-subtitle-container {
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-brand img {
+    width: 70%;
+  }
+  .hero-brand::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 70%;
+    transform: translateX(-100%);
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, black 100%);
+    width: 400px;
+  }
+  .hero-brand.reversed::after {
+    left: 30%;
+    transform: translateX(0%);
+    background: linear-gradient(to left, transparent 0%, black 100%);
+  }
+  .hero-brand.reversed img {
+    float: right;
+  }
+  .hero-brand.reversed .hero-text {
+    right: unset;
+    text-align: left;
+    left: 2rem;
+  }
+  .hero-text {
+    width: 40%;
+  }
+  .hero-brand.reversed .hero-text .hero-subtitle-container {
+    justify-content: start;
+  }
+}
+
 /*
 ----------
 Animations
