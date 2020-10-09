@@ -22,12 +22,14 @@ window.addEventListener('scroll', () => {
     sections.length -
     [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) -
     1;
-  if (current === sections.length) return;
+  if (current === sections.length) return document.title = `Inova | Prosphering Innovation`;
 
   navItems.forEach((navItem) => {
     navItem.classList.remove('active');
   });
-  navItems[current].classList.add('active');
+  const currentItem = navItems[current]; 
+  currentItem.classList.add('active');
+  document.title = `Inova | ${currentItem.innerHTML}`;
 });
 
 // Make elemenst fade in and out
@@ -93,7 +95,7 @@ navItems.forEach((navItem) => {
         <h1 class="hero-title">${section.title}</h1>
         <div class="d-flex align-items-center hero-subtitle-container">
             <h2 class="hero-subtitle">${section.subtitle}</h2>
-            <a href="#innovation-camps" role="button" class="button button-primary small ml-2 d-block hero-action"><div>Join us</div></a>
+            <a title="Join innovation camp" href="#innovation-camps" role="button" class="button button-primary small ml-2 d-block hero-action"><div>Join us</div></a>
         </div>
     </div>
 </div>`
