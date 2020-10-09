@@ -4,14 +4,13 @@ function DataJS(element, array = false) {
   return document.querySelector(query);
 }
 
-
 // Responsive navbar
-const toggleCollapse = document.querySelector(".toggle-collapse");
-const navbarCollapse = document.querySelector(".navbar-collapse");
-const collapse = document.querySelector(".collapse");
+const toggleCollapse = document.querySelector('.toggle-collapse');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+const collapse = document.querySelector('.collapse');
 
-toggleCollapse.addEventListener("click", e => {
-    navbarCollapse.classList.toggle("collapse");
+toggleCollapse.addEventListener('click', (e) => {
+  navbarCollapse.classList.toggle('collapse');
 });
 
 // Add class active to nav links
@@ -19,33 +18,34 @@ const sections = document.querySelectorAll('section');
 const navItems = document.querySelectorAll('.navItem');
 
 window.addEventListener('scroll', () => {
-    const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) - 1; 
-    if(current === sections.length) return;
+  const current =
+    sections.length -
+    [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) -
+    1;
+  if (current === sections.length) return;
 
-    navItems.forEach(navItem => {
-        navItem.classList.remove('active');
-    })
-    navItems[current].classList.add('active');
+  navItems.forEach((navItem) => {
+    navItem.classList.remove('active');
+  });
+  navItems[current].classList.add('active');
 });
 
 // Make elemenst fade in and out
 const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.7
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.7,
 };
 
 function observerCallback(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.replace('fadeOut', 'fadeIn');
-        }
-    });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.replace('fadeOut', 'fadeIn');
+    }
+  });
 }
 
 const fadeElms = document.querySelectorAll('.fade');
 
 const observer = new IntersectionObserver(observerCallback, observerOptions);
-fadeElms.forEach(el => observer.observe(el));
-
-
+fadeElms.forEach((el) => observer.observe(el));
