@@ -5,12 +5,32 @@ function DataJS(element, array = false) {
 }
 
 // Responsive navbar
+const navbar = document.querySelector('.navbar');
 const toggleCollapse = document.querySelector('.toggle-collapse');
 const navbarCollapse = document.querySelector('.navbar-collapse');
 const collapse = document.querySelector('.collapse');
-
+const outsideClickHandler = (e) => {
+  if (navbarCollapse.classList.contains('collapse')) {
+    // If navbar is opened then hide it if user clicked outside of navbar.
+    if (navbar.contains(e.target)) return;
+    navbarCollapse.classList.remove('collapse');
+    // Since we have closed the navbar, remove event listeners
+    attachOutsideHandler();
+  }
+};
+const attachOutsideHandler = () => {
+  if (navbarCollapse.classList.contains('collapse')) {
+    document.addEventListener('mousedown', outsideClickHandler);
+    document.addEventListener('touchstart', outsideClickHandler);
+  } else {
+    document.removeEventListener('mousedown', outsideClickHandler);
+    document.removeEventListener('touchstart', outsideClickHandler);
+  }
+};
 toggleCollapse.addEventListener('click', (e) => {
   navbarCollapse.classList.toggle('collapse');
+  console.log('called');
+  attachOutsideHandler();
 });
 
 // Add class active to nav links
