@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "parcel watch index.html",
+    "dev": "parcel index.html",
     "build": "parcel build index.html"
   },
   "repository": {
