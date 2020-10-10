@@ -8,7 +8,7 @@
           "ie": "11"
         }
       }
-    ],
-    ["@babel/plugin-transform-parameters"]
-  ]
+    ]
+  ],
+  "plugins": ["@babel/plugin-transform-parameters"]
 }
