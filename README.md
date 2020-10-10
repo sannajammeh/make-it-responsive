@@ -8,7 +8,7 @@ To run this project locally you can open index.html in your browser. This will n
 
 To make it browser compatible we have used Parced, a zero config bundler & transpiler. You can run a browser compatible version of this project by following the steps below.
 
-- Make sure that you have NodeJS installed on your computer
+- Make sure that you have NodeJS installed on your computer.
 - Navigate to this folder in your terminal and type `npm install` then type `npm run dev`, this will start a development server locally on your computer.
 - Go to `http://localhost:1234` in your browser.
 
