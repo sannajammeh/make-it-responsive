@@ -35,7 +35,7 @@ toggleCollapse.addEventListener('click', (e) => {
 
 // Add class active to nav links
 const sections = document.querySelectorAll('section');
-const navItems = document.querySelectorAll('.navItem');
+const navItems = document.querySelectorAll('.nav-item');
 
 window.addEventListener('scroll', () => {
   // if navitems are hidden, do nothing.
@@ -44,6 +44,7 @@ window.addEventListener('scroll', () => {
     sections.length -
     [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) -
     1;
+
   if (current === sections.length) return (document.title = `Inova | Prosphering Innovation`);
 
   navItems.forEach((navItem) => {
