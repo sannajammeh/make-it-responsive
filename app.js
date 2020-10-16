@@ -1,3 +1,4 @@
+// jQuery
 function DataJS(element, array = false) {
   const query = `[data-js="${element}"]`;
   if (array) return document.querySelectorAll(query);
@@ -22,8 +23,7 @@ window.addEventListener('scroll', () => {
   if (navItems.length === 0) return;
   const current =
     sections.length -
-    [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) -
-    1;
+    [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) - 1;
   if (current === sections.length) return (document.title = `Inova | Prosphering Innovation`);
 
   navItems.forEach((navItem) => {
@@ -91,17 +91,17 @@ navItems.forEach((navItem) => {
   heroContainer.innerHTML = heroSections
     .map(
       (section) => /*html*/ `
-<div class="hero-brand ${section.reversed ? 'reversed' : ''}" data-js="hero-item">
-    <div class="hero-fade"></div>
-    <img src="${section.img}" alt="${section.title}" />
-    <div class="hero-text">
-        <h1 class="hero-title">${section.title}</h1>
-        <div class="d-flex align-items-center hero-subtitle-container">
-            <h2 class="hero-subtitle">${section.subtitle}</h2>
-            <a title="Join innovation camp" href="#innovation-camps" role="button" class="button button-primary small ml-2 d-block hero-action"><div>Join us</div></a>
-        </div>
-    </div>
-</div>`
+      <div class="hero-brand ${section.reversed ? 'reversed' : ''}" data-js="hero-item">
+          <div class="hero-fade"></div>
+          <img src="${section.img}" alt="${section.title}" />
+          <div class="hero-text">
+              <h1 class="hero-title">${section.title}</h1>
+              <div class="d-flex align-items-center hero-subtitle-container">
+                  <h2 class="hero-subtitle">${section.subtitle}</h2>
+                  <a title="Join innovation camp" href="#innovation-camps" role="button" class="button button-primary small ml-2 d-block hero-action"><div>Join us</div></a>
+              </div>
+          </div>
+      </div>`
     )
     .join('');
 
