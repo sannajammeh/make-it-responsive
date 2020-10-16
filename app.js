@@ -1,4 +1,3 @@
-// jQuery
 function DataJS(element, array = false) {
   const query = `[data-js="${element}"]`;
   if (array) return document.querySelectorAll(query);
@@ -43,7 +42,8 @@ window.addEventListener('scroll', () => {
   if (navItems.length === 0) return;
   const current =
     sections.length -
-    [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) - 1;
+    [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) -
+    1;
   if (current === sections.length) return (document.title = `Inova | Prosphering Innovation`);
 
   navItems.forEach((navItem) => {
@@ -71,7 +71,7 @@ function observerCallback(entries, observer) {
 }
 
 const fadeElms = document.querySelectorAll('.fade');
-
+fadeElms.forEach((elm) => elm.classList.add('fadeOut'));
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 fadeElms.forEach((el) => observer.observe(el));
 
