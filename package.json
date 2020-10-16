@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "parcel watch index.html",
-    "build": "parcel build index.html"
+    "dev": "parcel index.html",
+    "build": "parcel build --out-dir public index.html"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/sannajammeh/make-it-responsive#readme",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-parameters": "^7.10.5",
+    "@babel/polyfill": "^7.11.5",
+    "babel-plugin-polyfill-corejs3": "0.0.6",
     "parcel-bundler": "^1.12.4"
   }
 }

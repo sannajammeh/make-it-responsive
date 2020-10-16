@@ -1,4 +1,4 @@
-@import './css/spacing.css';
+@import './spacing.css';
 :root {
   --black: #121212;
   --light: #f6f6f6;
@@ -39,7 +39,6 @@ section {
   padding-top: 86px;
 }
 
-
 h1,
 h2,
 h3,
@@ -55,7 +54,6 @@ p {
   margin-top: 5px;
 }
 
-
 body {
   margin: 0;
   padding: 0;
@@ -64,9 +62,7 @@ body {
   color: var(--text-on-bg);
   background-color: var(--bg);
   overflow-x: hidden;
-  
 }
-
 
 .container {
   padding: 50px 50px;
@@ -192,7 +188,7 @@ Text
 }
 
 .introHeader {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px 10px;
@@ -202,7 +198,6 @@ Text
 .align-items-center {
   align-items: center;
 }
-
 
 /* Hero */
 
@@ -609,7 +604,6 @@ Responsive
     overflow: hidden;
     text-align: center;
     height: 0px;
-    transition: all 499ms ease;
   }
   .team-member {
     display: block;
