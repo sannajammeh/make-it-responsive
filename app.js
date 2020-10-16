@@ -29,7 +29,6 @@ const attachOutsideHandler = () => {
 };
 toggleCollapse.addEventListener('click', (e) => {
   navbarCollapse.classList.toggle('collapse');
-  console.log('called');
   attachOutsideHandler();
 });
 
