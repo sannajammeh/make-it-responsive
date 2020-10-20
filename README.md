@@ -15,3 +15,4 @@ To make it browser compatible we have used Parced, a zero config bundler & trans
 - To run a production ready version of this project type `npm run build` in your terminal and use the contents in the `dist` folder.
 
 s354397
+s351880
