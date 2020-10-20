@@ -126,13 +126,18 @@
             <br />
           </p>
           <span class="font-weight-medium mt-1"> The lastest of which is on Oct 27. </span>
-          <button role="button" title="Join Us" class="button button-primary small ml-2">
+          <a
+            href="#innovation-camps"
+            role="button"
+            title="Join Us"
+            class="button button-primary small ml-2"
+          >
             Join us
-          </button>
+          </a>
         </div>
       </div>
     </section>
-    <!--About us end -->
+    <!-- About us end -->
 
     <!-- Our team -->
     <section id="our-team">
@@ -226,11 +231,6 @@
                 <p>Oct 27th.</p>
                 <h2>Camp Bergen</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, culpa.</p>
-                <div>
-                  <button role="button" title="Join Camp" class="button button-primary">
-                    Join camp
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -246,9 +246,6 @@
                 <p>December 6th.</p>
                 <h2>Camp Trondheim</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, culpa.</p>
-                <div>
-                  <button role="button" class="button button-primary">Join camp</button>
-                </div>
               </div>
             </div>
           </div>
@@ -259,11 +256,6 @@
                 <p>March 24th.</p>
                 <h2>Camp Oslo</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, culpa.</p>
-                <div>
-                  <button role="button" title="Join Camp" class="button button-primary">
-                    Join camp
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -274,7 +266,7 @@
 
     <!-- Contact us -->
     <section id="contact-us">
-      <div class="container">
+      <form class="container contact-form">
         <h1 class="sectionHeader text-center">Let's work together!</h1>
         <hr />
         <p class="text-center contact-text">
@@ -311,8 +303,8 @@
           <div class="col-xs-12 col-md-6">
             <label class="labelText" for="email">Your email adress *</label>
             <input
-              type="text"
               id="email"
+              type="email"
               class="input-el"
               placeholder="Please enter your email adress ..."
               required
@@ -331,10 +323,10 @@
           </div>
 
           <div class="col-xs-12 pt-3 pb-3 text-center">
-            <a role="button" title="Submit" href="#" class="button button-primary">Submit</a>
+            <button role="button" title="Submit" class="button button-primary">Submit</button>
           </div>
         </div>
-      </div>
+      </form>
     </section>
     <!-- Contact us end -->
 
@@ -343,16 +335,26 @@
       <div class="container">
         <div class="row">
           <!-- Newsletter -->
-          <div class="footer-flex footer-item">
+          <form class="footer-flex footer-item subscribe-form">
             <h3 class="text-center footer-header">Sign up for our newsletter</h3>
             <p class="text-center">Join over 10.500 people who recieve weekly innovation tips</p>
             <center>
-              <input placeholder="Your email adress..." class="footer-input" />
-              <button role="button" title="Submit" class="footer-btn button button-primary small">
+              <input
+                required
+                type="email"
+                placeholder="Your email adress..."
+                class="footer-input"
+              />
+              <button
+                role="button"
+                type="submit"
+                title="Submit"
+                class="footer-btn button button-primary small"
+              >
                 Submit
               </button>
             </center>
-          </div>
+          </form>
           <!-- Get in touch -->
           <div class="footer-flex footer-item">
             <h3 class="text-center footer-header">Get in touch</h3>

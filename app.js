@@ -144,3 +144,16 @@ navItems.forEach((navItem) => {
   // If no hero items, dont do anything.
   !total && clearInterval(interval);
 })();
+
+const contactForm = document.querySelector('contact-form');
+const contactFormButton = contactForm.querySelector('button');
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+});
+
+const subscribeForm = document.querySelector('.subscribe-form');
+const subscribeBtn = document.querySelector('.footer-btn');
+subscribeForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  subscribeBtn.innerHTML = 'Submitted';
+});
