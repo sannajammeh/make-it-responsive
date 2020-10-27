@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Meta -->
@@ -113,7 +113,7 @@
       <h2 class="sectionHeader text-center">About us</h2>
       <hr />
       <div class="row">
-        <div class="col-sm-6 p-3 fade fadeOut">
+        <div class="col-sm-6 p-3 fade">
           <h3 class="mt-4 font-weight-medium">World leader in frugal innovation</h3>
           <p class="mt-1">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, aut. Delectus,
@@ -121,7 +121,7 @@
             <br />Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, incidunt?
           </p>
         </div>
-        <div class="col-sm-6 p-3 fade fadeOut">
+        <div class="col-sm-6 p-3 fade">
           <h3 class="mt-4 font-weight-medium">Hosting the world's innovation camps</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium
@@ -129,13 +129,18 @@
             <br />
           </p>
           <span class="font-weight-medium mt-1"> The lastest of which is on Oct 27. </span>
-          <button role="button" title="Join Us" class="button button-primary small ml-2">
+          <a
+            href="#innovation-camps"
+            role="button"
+            title="Join Us"
+            class="button button-primary small ml-2"
+          >
             Join us
-          </button>
+          </a>
         </div>
       </div>
     </section>
-    <!--About us end -->
+    <!-- About us end -->
 
     <!-- Our team -->
     <section id="our-team">
@@ -146,13 +151,9 @@
         <div class="row">
           <div class="col-sm-12 team-member d-flex">
             <div class="center-img col-sm-6">
-              <img
-                alt="Picture of manager"
-                class="rounded img-fluid fade fadeOut"
-                src="img/person1.jpg"
-              />
+              <img alt="Picture of manager" class="rounded img-fluid fade" src="img/person1.jpg" />
             </div>
-            <div class="fade fadeOut">
+            <div class="fade">
               <h2 class="teamHeader">Manager</h2>
               <h2 class="teamName">Houcine Ncib</h2>
               <p>
@@ -171,13 +172,9 @@
         <div class="row">
           <div class="col-sm-12 team-member d-flex">
             <div class="center-img col-sm-6">
-              <img
-                alt="Picture of Designer"
-                class="rounded img-fluid fade fadeOut"
-                src="img/person2.jpg"
-              />
+              <img alt="Picture of Designer" class="rounded img-fluid fade" src="img/person2.jpg" />
             </div>
-            <div class="fade fadeOut">
+            <div class="fade">
               <h2 class="teamHeader">Designer</h2>
               <h2 class="teamName">Luis Villasmil</h2>
               <p>
@@ -198,11 +195,11 @@
             <div class="center-img col-sm-6">
               <img
                 alt="Picture of Developer"
-                class="rounded img-fluid fade fadeOut"
+                class="rounded img-fluid fade"
                 src="img/person3.jpg"
               />
             </div>
-            <div class="fade fadeOut">
+            <div class="fade">
               <h2 class="teamHeader">Developer</h2>
               <h2 class="teamName">Etty Fidele</h2>
               <p>
@@ -226,53 +223,42 @@
         <hr />
         <div class="row justify-content-center">
           <div class="col-sm-4">
-            <div class="card fade fadeOut">
+            <div class="card fade">
               <div
                 class="card-header"
                 style="
-                  background-image: url('https://www.uib.no/sites/w3.uib.no/files/styles/wide_thumbnail/public/media/universitetsmuseet_museplassen3_0_1.jpg?itok=vXtY7C-W');"
+                  background-image: url('https://www.uib.no/sites/w3.uib.no/files/styles/wide_thumbnail/public/media/universitetsmuseet_museplassen3_0_1.jpg?itok=vXtY7C-W');
+                "
               ></div>
               <div class="card-content">
                 <p>Oct 27th.</p>
                 <h2>Camp Bergen</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, culpa.</p>
-                <div>
-                  <button role="button" title="Join Camp" class="button button-primary">
-                    Join camp
-                  </button>
-                </div>
               </div>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="card fade fadeOut delay-1">
+            <div class="card fade delay-1">
               <div
                 class="card-header"
                 style="
-                  background-image: url('https://images.unsplash.com/photo-1555725305-e823b44548de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80');"
+                  background-image: url('https://images.unsplash.com/photo-1555725305-e823b44548de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80');
+                "
               ></div>
               <div class="card-content">
                 <p>December 6th.</p>
                 <h2>Camp Trondheim</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, culpa.</p>
-                <div>
-                  <button role="button" class="button button-primary">Join camp</button>
-                </div>
               </div>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="card fade fadeOut delay-2">
+            <div class="card fade delay-2">
               <div class="card-header"></div>
               <div class="card-content">
                 <p>March 24th.</p>
                 <h2>Camp Oslo</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, culpa.</p>
-                <div>
-                  <button role="button" title="Join Camp" class="button button-primary">
-                    Join camp
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -283,7 +269,7 @@
 
     <!-- Contact us -->
     <section id="contact-us">
-      <div class="container">
+      <form class="container contact-form">
         <h1 class="sectionHeader text-center">Let's work together!</h1>
         <hr />
         <p class="text-center contact-text">
@@ -320,8 +306,8 @@
           <div class="col-xs-12 col-md-6">
             <label class="labelText" for="email">Your email adress *</label>
             <input
-              type="text"
               id="email"
+              type="email"
               class="input-el"
               placeholder="Please enter your email adress ..."
               required
@@ -340,10 +326,10 @@
           </div>
 
           <div class="col-xs-12 pt-3 pb-3 text-center">
-            <a role="button" title="Submit" href="#" class="button button-primary">Submit</a>
+            <button role="button" title="Submit" class="button button-primary">Submit</button>
           </div>
         </div>
-      </div>
+      </form>
     </section>
     <!-- Contact us end -->
 
@@ -352,16 +338,26 @@
       <div class="container">
         <div class="row">
           <!-- Newsletter -->
-          <div class="footer-flex footer-item">
+          <form class="footer-flex footer-item subscribe-form">
             <h3 class="text-center footer-header">Sign up for our newsletter</h3>
             <p class="text-center">Join over 10.500 people who recieve weekly innovation tips</p>
             <center>
-              <input placeholder="Your email adress..." class="footer-input" />
-              <button role="button" title="Submit" class="footer-btn button button-primary small">
+              <input
+                required
+                type="email"
+                placeholder="Your email adress..."
+                class="footer-input"
+              />
+              <button
+                role="button"
+                type="submit"
+                title="Submit"
+                class="footer-btn button button-primary small"
+              >
                 Submit
               </button>
             </center>
-          </div>
+          </form>
           <!-- Get in touch -->
           <div class="footer-flex footer-item">
             <h3 class="text-center footer-header">Get in touch</h3>
@@ -388,6 +384,7 @@
                 title="Go to linkedin"
                 href="https://www.linkedin.com"
                 target="_blank"
+                rel="noopener"
                 class="linkedin"
                 ><i class="fab fa-linkedin"></i
               ></a>
@@ -395,6 +392,7 @@
                 title="Go to facebook"
                 href="https://www.facebook.com"
                 target="_blank"
+                rel="noopener"
                 class="facebook"
                 ><i class="fab fa-facebook"></i
               ></a>
@@ -402,6 +400,7 @@
                 title="Go to instagram"
                 href="https://www.instagram.com/"
                 target="_blank"
+                rel="noopener"
                 class="instagram"
                 ><i class="fab fa-instagram"></i
               ></a>
@@ -409,6 +408,7 @@
                 title="Go to youtube"
                 href="https://www.youtube.com"
                 target="_blank"
+                rel="noopener"
                 class="youtube"
                 ><i class="fab fa-youtube"></i
               ></a>

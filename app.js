@@ -1,4 +1,3 @@
-// jQuery
 function DataJS(element, array = false) {
   const query = `[data-js="${element}"]`;
   if (array) return document.querySelectorAll(query);
@@ -30,20 +29,21 @@ const attachOutsideHandler = () => {
 };
 toggleCollapse.addEventListener('click', (e) => {
   navbarCollapse.classList.toggle('collapse');
-  console.log('called');
   attachOutsideHandler();
 });
 
 // Add class active to nav links
 const sections = document.querySelectorAll('section');
-const navItems = document.querySelectorAll('.navItem');
+const navItems = document.querySelectorAll('.nav-item');
 
 window.addEventListener('scroll', () => {
   // if navitems are hidden, do nothing.
   if (navItems.length === 0) return;
   const current =
     sections.length -
-    [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) - 1;
+    [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 86) -
+    1;
+
   if (current === sections.length) return (document.title = `Inova | Prosphering Innovation`);
 
   navItems.forEach((navItem) => {
@@ -71,7 +71,7 @@ function observerCallback(entries, observer) {
 }
 
 const fadeElms = document.querySelectorAll('.fade');
-
+fadeElms.forEach((elm) => elm.classList.add('fadeOut'));
 const observer = new IntersectionObserver(observerCallback, observerOptions);
 fadeElms.forEach((el) => observer.observe(el));
 
@@ -144,3 +144,16 @@ navItems.forEach((navItem) => {
   // If no hero items, dont do anything.
   !total && clearInterval(interval);
 })();
+
+const contactForm = document.querySelector('contact-form');
+const contactFormButton = contactForm.querySelector('button');
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+});
+
+const subscribeForm = document.querySelector('.subscribe-form');
+const subscribeBtn = document.querySelector('.footer-btn');
+subscribeForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  subscribeBtn.innerHTML = 'Submitted';
+});
